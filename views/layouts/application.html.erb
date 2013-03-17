@@ -1,10 +1,18 @@
+ <%
+        def link_to(name, url)
+            return "<a href='#{url}'>#{name}</a>"
+         end
+        %>
+
+
+
 <html>
   <body>
     <h1>You're using a layout</h1>
     <p>
-      <h3> I'm a header</h3>
-      <p>Put things in the header</p>
+      <a href='http://schneems.com/ut-rails'>Ruby on Rails tut</a>
       <a href='me.html'>Me</a>
+       <%= link_to('This is a link to google', 'http://google.com') %>
 
     </p>
     <hr />
@@ -13,8 +21,8 @@
     </div>
     <hr />
     <div>
-      <h3> I'm a footer</h3>
-      <p>Put things in the footer</p>
+      <h3> Thanks to Schneems</h3>
+      
     </div>
   </body>
 </html>
