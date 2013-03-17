@@ -22,7 +22,17 @@
     <hr />
     <div>
       <h3> Thanks to Schneems</h3>
-      
+         <% if @request.query['sex'] && !@request.query['sex'].empty? %>
+        Hello there <%= @request.query['sex'] %>
+      <% else %>
+        Enter your sex
+      <% end %>
+        <form>
+            <form method='post' action="<%= @request.path %>">
+<input type="radio" name="sex" value="male">Male<br>
+<input type="radio" name="sex" value="female">Female
+ <input type="submit" value="Submit"/>
+</form> 
     </div>
   </body>
 </html>
